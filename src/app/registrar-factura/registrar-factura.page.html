@@ -1,0 +1,96 @@
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Registre factura</ion-label>
+    </ion-list-header>
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label>
+          Categoria
+        </ion-label>
+      </ion-item-divider>
+  
+        <ion-item>
+          <ion-input placeholder="Id"></ion-input>
+        </ion-item>
+      <ion-item>
+        <ion-input placeholder="Nombre"></ion-input>
+      </ion-item>
+    </ion-item-group>
+  
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label>
+          Producto
+        </ion-label>
+      </ion-item-divider>
+  
+      <ion-item>
+        <ion-input placeholder="Id"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Detalle"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Precio"></ion-input>
+        
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Categoria"></ion-input>
+      </ion-item>
+    </ion-item-group>
+
+
+    <ion-item-group>
+      <ion-item-divider>
+        <ion-label>
+          Item
+        </ion-label>
+      </ion-item-divider>
+  
+      <ion-item>
+        <ion-input placeholder="Id"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Detalle"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Producto_Id"></ion-input>
+      </ion-item>
+    </ion-item-group>
+  
+  </ion-list>
+
+  <section>
+
+    <a [routerLink]="['/']" routerLinkActive="router-link-active"><ion-button expand="block"> Registrar</ion-button></a> 
+  </section>
+
+    <ion-tabs>
+      <ion-router-outlet></ion-router-outlet>
+    
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home">
+          <a [routerLink]="['/facturas']" routerLinkActive="router-link-active">lista de facturas</a> 
+          <ion-icon name="checkbox-outline"></ion-icon>
+        </ion-tab-button>
+  
+        <ion-tab-button tab="radio">
+          <a [routerLink]="['/registrar-factura']" routerLinkActive="router-link-active">Registrar nueva factura</a> 
+          <ion-icon name="reader-outline"></ion-icon>
+          
+        </ion-tab-button>
+        <ion-tab-button tab="radio" >
+          <a [routerLink]="['/']" routerLinkActive="router-link-active">cerrar sesion</a> 
+          <ion-icon name="exit-outline"></ion-icon>
+        
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-content>
+ 
+  
+
