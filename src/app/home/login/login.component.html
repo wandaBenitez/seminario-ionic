@@ -1,12 +1,31 @@
-<ion-item>
-  <ion-label><ion-icon name="mail-outline"></ion-icon></ion-label>
-<ion-input placeholder="Ingrese su correo" [value]="email"></ion-input>
-</ion-item>
-<ion-item>
-  <ion-label><ion-icon name="bag-outline"></ion-icon></ion-label>
-<ion-input placeholder="ingrese su contraseña" type="password"></ion-input>
-</ion-item>
-<section>
+<ion-card>
+  <img alt="Silhouette of mountains" src="../assets/img/banner-login.jpg" />
+  <ion-card-header class="header-login">
+    <ion-card-title>Inicio de sesión</ion-card-title>
+    <ion-card-subtitle class="tamaño-letra">Inicia sesión con tu cuenta de joseando</ion-card-subtitle>
+  </ion-card-header>
 
-  <a [routerLink]="['/facturas']" routerLinkActive="router-link-active"><ion-button expand="block"> Entrar</ion-button></a> 
-</section>
+  <ion-card-content>
+
+    <ion-item class="box-form">
+      <ion-label>
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-label>
+      <ion-input placeholder=" Email" [value]=""></ion-input>
+    </ion-item>
+
+    <ion-item class="box-form">
+      <ion-label>
+        <ion-icon name="keypad-outline"></ion-icon>
+      </ion-label>
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+    <section class="enlace-ingreso">
+      <a [routerLink]="['/facturas']" routerLinkActive="router-link-active"><ion-button expand="block" class="boton">Ingresar</ion-button></a>
+
+      <p>¿No tienes cuenta? <a [routerLink]="['/registro']" routerLinkActive="router-link-active">Registrate</a> </p>
+    </section>
+
+  </ion-card-content>
+</ion-card>
